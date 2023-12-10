@@ -21,6 +21,7 @@ async def check_database(id: str):
     print(f"Checking database for id {id}")
     return True
 
-if __name__ == "__main__":
-    loop = asyncio.get_running_loop()
-    loop.run_until_complete(worker.work())
+
+loop = asyncio.get_event_loop()
+loop.run_until_complete(worker.work())
+
